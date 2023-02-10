@@ -48,4 +48,21 @@ print(type(range(5)))
 for i in range(5):
     print(i, end=' ')
 
-# enumerate
+print('\n')
+# enumerate : '열거하다'는 뜻의 함수로, 여러 가지 자료형(list, set, tuple.. 등)을 인덱스를 포함한
+# enumerate 객체로 리턴한다.
+
+nums = [1, 2, 3, 2, 45, 2, 5]
+eum = enumerate(nums)
+print(eum) #
+
+eum_list = list(enumerate(nums))
+print(eum_list)
+
+print("enumerate()는  인덱스를 포함한 객체를 만들어주는거야~")
+
+
+# b = ['a1', 'b1', 'c1'] 가 있을 때 이 리스트의 인덱스와 값을 함께 출력하려면 ?
+
+
+
