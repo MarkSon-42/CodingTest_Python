@@ -19,3 +19,5 @@ def solution(k, score):
                 answer.append(min(honor))
 
     return answer
+
+# 매우 안좋은 풀이로 반면교사 삼아서 업로드 하였음.
