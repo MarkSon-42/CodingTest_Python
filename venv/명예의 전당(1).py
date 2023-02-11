@@ -13,7 +13,7 @@ def solution(k, score):
                 answer.append(min(honor))
             elif score[i] <= min(honor):
                 answer.append(min(honor))
-            elif score[i] >= min(honor) and score[i] <= max(honor):
+            elif min(honor) <= score[i] <= max(honor):
                 honor.append(score[i])
                 honor.remove(min(honor))
                 answer.append(min(honor))
