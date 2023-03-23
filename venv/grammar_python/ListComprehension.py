@@ -57,5 +57,7 @@ end = time.time()
 # Display time taken by for_loop()
 print('Time taken for list_comprehension:', round(end - begin, 2))
 
+# Nested List Comprehensions
+matrix = []
 
-
+for i in range(3):
