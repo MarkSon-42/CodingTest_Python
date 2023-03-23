@@ -25,6 +25,10 @@ def cube(y):
     print(f"Finding cube of number:{y}")
     return y * y * y
 
+# 람다 함수와 def 키워드를 사용하여 정의된 다른 함수 의 주요 차이점은
+# 람다 함수 내에서 여러 문을 사용할 수 없으며 허용되는 문도 람다 문 내에서 매우 제한된다는 것입니다.
+# 람다 함수를 사용하여 복잡한 작업을 수행하면 코드의 가독성에 영향을 미칠 수 있습니다.
+
 
 lambda_cube = lambda num: num ** 3
 
