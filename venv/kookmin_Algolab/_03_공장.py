@@ -31,5 +31,4 @@ for i in range(t):
 
     print(sum(A), sum(B))
 
-
-# 시간 초과가 뜨네...?
+# 힌트 : 큐
