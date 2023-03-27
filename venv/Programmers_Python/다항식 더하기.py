@@ -32,7 +32,24 @@
  # 이 풀이를 참고
 
 def solution(polynomial):
-    x, num = 0, 0
+    x, num = 0, 0 # x, n은 각각 1차항계수, 상수 _ init
     polynomial = polynomial.split(" + ")
     for i in polynomial:
         if i.isnumeric(): # isnumeric() :  https://it-neicebee.tistory.com/33
+            # return eval(polynomial) , python eval() : 문자열로 싯을 입력하면 해당식을 실행한 결과값으로 반환해줌.
+            num += int(i)
+        else:
+            if len(i) == 1: # 문자열이 등장하면 길이를 이용한 테크닉을 생각해보기...
+                x += 1
+            else:
+                x += int(i[:-1])
+
+    if x == '0' and num == '0':
+        return 0
+    if x == '0':
+        return num
+    if x == '1':
+        x = ""
+    if num == '0':
+        return x + "x"
+    return x + "x + " + num
