@@ -1,15 +1,14 @@
 t = int(input())
 answer = 0
+
+def steps(n ,p):
+    a = (p+1)//2
+    b = (n-p)//2
+
+    return a + b
 for i in range(t):
     n, p = map(int,input().split())
-
-    if p % 2 == 0:
-        answer = (n // 2) + 1
-        print(answer)
-    else:
-        answer = n // 2
-        print(answer)
+    print(steps(n, p))
 
 
 
-# 아래 코드는 75점 (why??)
