@@ -1,6 +1,7 @@
 # Like stack, queue is a linear data structure...
 
 # Queue :FIFO , Stack LIFO
+
 queue = []
 
 queue.append('a')
