@@ -21,3 +21,5 @@ for start in range(n):
     interval_sum -= data[start]
 
 print(count)
+
+
