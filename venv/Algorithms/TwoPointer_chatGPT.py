@@ -7,6 +7,12 @@ def twoSum(nums, target):
     while left < right:
         if nums[left] + nums[right] == target:
             return True
+        elif nums[left] + nums[right] < target:
+            left += 1
+        else:
+            right -= 1
+
+    return False
 
 class ListNode:
     def __init__(self, val=0, next=None):
