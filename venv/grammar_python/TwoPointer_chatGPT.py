@@ -7,3 +7,14 @@ def twoSum(nums, target):
     while left < right:
         if nums[left] + nums[right] == target:
             return True
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def removeNthFromEnd(head, n):
+    dummy = ListNode(0)
+    dummy.next = head
+
+    slow = dummy
