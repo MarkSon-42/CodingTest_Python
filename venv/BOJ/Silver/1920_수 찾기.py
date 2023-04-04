@@ -25,6 +25,26 @@ for num in M_nums:
     isExist = False # 찾았는지 여부
 
     # start binary search
-     while left_element <= right_element:
-         mid = (left_element + right_element) // 2
-         if num == N_nums[mid]:
+    while left_element <= right_element:
+        mid = (left_element + right_element) // 2 # left ~ right의 중간값
+        if num == N_nums[mid]:
+             isExist = True
+             print(1)
+             break
+        elif num > N_nums[mid]:
+          left_element = mid + 1
+        else:
+            right_element = mid - 1
+    if isExist == False:
+        print(0)
+
+
+# 방법 2
+
+n = int(input())
+a = set(map(int, input().split())) # 탐색시간을 줄이기 위해 set으로 받는다.
+m = int(input())
+arr = list(map(int, input().split()))
+
+for num in arr:
+    print(1) if num in a else print(0)
