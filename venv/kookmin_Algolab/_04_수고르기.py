@@ -1,7 +1,4 @@
-
-
-import sys
-from itertools import combinations
+# 이건 투포인터 문제야. 다시 풀어보자.
 
 t = int(input())
 
