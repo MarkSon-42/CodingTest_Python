@@ -21,3 +21,30 @@ for _ in range(t):
 
 
 
+
+
+# 권용재 학우님이 코드 _ 레전드 매치
+import sys
+
+t = int(input())
+for tt in range(t):
+    m, n = map(int, sys.stdin.readline().split())
+    status = sorted(map(int, sys.stdin.readline().split()), reverse=True)
+    if m % 2 != 0:
+        status.append(0)
+        m += 1
+    delta = []
+    for i in range(0, m, 2):
+        temp = status[i] - status[i + 1]
+        delta.append((i, temp))
+    delta.sort(key=lambda x: x[1], reverse=True)
+
+    for i in range(n):
+        index = delta[i][0]
+        status[index], status[index + 1] = status[index + 1], status[index]
+
+    answer = 0
+    for i in range(1, m, 2):
+        answer += status[i]
+
+    print(answer)
