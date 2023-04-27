@@ -1,6 +1,6 @@
 t = int(input())
 
-for cnt in range(numCase): # 왜 증감 인덱스가 cnt인지??
+for cnt in range(t): # 왜 증감 인덱스가 cnt인지??
     n = int(input())
     A, B = [], [] # 공장 A와 B에 주문한 제품 개수를 저장하는 리스트
     sum_a, sum_b = 0, 0 # 각각 가게에 주문한 총 개수를 저장
@@ -21,13 +21,15 @@ for cnt in range(numCase): # 왜 증감 인덱스가 cnt인지??
                 sum_b += int(cnt)
             else: # 주문 할당 공장이 C인 경우
                 if sum_a <= sum_b:
-                    pass
+                    A.append(int(cnt))
+                    sum_a += int(cnt)
                 else:
-                    pass
+                    B.append(int(cnt))
+                    sum_b += int(cnt)
         else:
             if fac == 'A':
-                pass
+                sum_a -= A.pop(0)
             else:
-                pass
+                sum_b -= B.pop(0)
     print(sum_a,sum_b)
 
