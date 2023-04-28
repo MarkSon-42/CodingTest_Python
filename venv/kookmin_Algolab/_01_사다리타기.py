@@ -15,3 +15,4 @@ for i in range(t):
 
     print(d)
 
+
