@@ -13,3 +13,5 @@ def solution(myString):
 
 def solution2(myString):
     return myString.lower().replace('a', 'A')
+
+# commit message added 'sol5'
