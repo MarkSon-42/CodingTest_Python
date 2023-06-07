@@ -7,3 +7,7 @@ def solution(arr, divisor):
             flag = 1
     answer.sort()
     return answer if flag == 1 else [-1]
+
+
+
+
