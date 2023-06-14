@@ -1,5 +1,21 @@
 def solution(quiz):
-    answer = []
-    for i in quiz:
-        if eval(i.split('=')[0]) == int(i.split('=')[1])
+    result = []
 
+    for formula in quiz:
+        x, operator, y, _, z = formula.split()
+        x = int(x)
+        y = int(y)
+        z = int(z)
+
+        if operator == '+':
+            if x + y == z:
+                result.append('O')
+            else:
+                result.append('X')
+        elif operator == '-':
+            if x - y == z:
+                result.append('O')
+            else:
+                result.append('X')
+
+    return result
