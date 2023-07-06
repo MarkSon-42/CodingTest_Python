@@ -14,14 +14,6 @@ def solution(arr):
 
 
 
-
-2
-3
-4
-5
-6
-7
-8
 def solution2(arr):
     stk = []
     for i in range(len(arr)):
