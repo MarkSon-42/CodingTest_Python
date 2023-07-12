@@ -4,4 +4,3 @@ def solution(q, r, code):
         if (i % q) == r:
             answer += code[i]
     return answer
-
