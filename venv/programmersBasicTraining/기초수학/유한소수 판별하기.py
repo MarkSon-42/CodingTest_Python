@@ -11,3 +11,26 @@ def solution(a, b):
     while b % 5 == 0:
         b //= 5
     return 1 if b == 1 else 2
+
+
+def gcd(a, b):
+    if a % b == 0:
+        return b
+    else:
+        return gcd(b, a%b)
+
+
+def factorization(x):
+    d = 2
+    output = []
+
+    while d <= x:
+        if x % d == 0:
+            output.append(d)
+            x /= d
+        else:
+            d += 1
+    return output
+
+
+
