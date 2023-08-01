@@ -12,7 +12,7 @@
 
 def solution(rank, attendance):
     a = [idx for idx, v in enumerate(attendance) if v]
-    b = sorted(a, key = lambda x : rank[x])
+    b = sorted(a, key=lambda x: rank[x])
 
     return b[0] * 10000 + b[1] * 100 + b[2]
 

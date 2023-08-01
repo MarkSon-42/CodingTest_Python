@@ -59,5 +59,3 @@ print('Time taken for list_comprehension:', round(end - begin, 2))
 
 # Nested List Comprehensions
 matrix = []
-
-for i in range(3):
