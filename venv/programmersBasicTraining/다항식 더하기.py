@@ -5,7 +5,7 @@ def solution(polynomial):
     for c in polynomial.split(' + '):
         if c.isdigit():
             const_number += int(c)
-        else:r
+        else:
             x_number = x_number + 1 if c == 'x' else x_number + int(c[:-1])
 
     if x_number == 0:
