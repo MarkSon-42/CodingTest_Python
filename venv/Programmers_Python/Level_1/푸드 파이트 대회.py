@@ -21,3 +21,22 @@ def solution(food):
 
 def solution2(food):
     n = len(food)  # 계속 len()을 호출하지 않게 처리하자
+    answer = ''
+
+    for i in range(1, n):
+        food_value = food[i]
+
+        if food_value >= 2:
+            food[i] = food[i] == food_value // 2
+        else:
+            food[i] = 0
+
+    for i in range(1, n):
+        answer += str(i) * food[i]
+
+    answer += '0'
+
+    for i in range(n - 1, 0, -1):
+        answer += str(i) + food[i]
+
+    return answer
