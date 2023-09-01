@@ -7,7 +7,8 @@ s = input().strip() # read a string and strip leading/trailing whitespaces
 name = 'Alice'
 age = 25
 print("My name is {0} and I am {1} years old.".format(name, age))
-
+#                                                       ^     ^
+#                                                      {0}   {1}
 # {index} _ 중괄호에 파라미터 인덱스를 넣는 방식
 
 # Reading input file
