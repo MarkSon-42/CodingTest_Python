@@ -28,15 +28,37 @@
 #
 # 1
 
+#
+# n = int(input())
+# for _ in range(n):
+#     maps = list(map(int, input().split()))
+#
+# r1, c1 = map(int, input().split())
+# r2, c2 = map(int, input().split())
+#
+# maps_min = maps[r1][c1]
+# for i in range(r1, c1):
+#     for j in range(r2, c2):
+#         if maps_min > maps[i][j]:
 
-n = int(input())
+# gen by gpt
+
+# Read input values
+n, k = map(int, input().split())
+grid = []
 for _ in range(n):
-    maps = list(map(int, input().split()))
-
+    row = list(map(int, input().split()))
+    grid.append(row)
 r1, c1 = map(int, input().split())
 r2, c2 = map(int, input().split())
 
-maps_min = maps[r1][c1]
-for i in range(r1, c1):
-    for j in range(r2, c2):
-        if maps_min > maps[i][j]:
+count = 0
+
+for i in range(r1 - 1, r2):
+    for j in range(c1 - 1, c2):
+        if grid[i][j] >= k:
+            count += 1
+
+print(count)
+
+
