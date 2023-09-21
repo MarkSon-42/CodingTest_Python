@@ -10,14 +10,19 @@ for row in array:
     avg = sum(row) / len(row)
     row_avg.append(avg)
 
-col_avg = []
-for j in range(4):
-    column_sum = sum(array[i][j] for i in range(2))
-    avg = column_sum / 2
-    col_avg.append(avg)
 
+#######################################################
+col_avg = []                                          #
+for j in range(4):                                    #
+    column_sum = sum(array[i][j] for i in range(2))   #
+    avg = column_sum / 2                              #
+    col_avg.append(avg)                               #
+#######################################################
 total_avg = sum(row_avg) / len(row_avg)
 
+print(f'{row_avg[0]:.1f} {row_avg[1]:.1f}')
+print(f'{col_avg[0]:.1f} {col_avg[1]:.1f} {col_avg[3]:.1f} {col_avg[4]:.1f}')
+print(f'{total_avg:.1f}')
 
 
 # input
