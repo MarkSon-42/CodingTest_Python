@@ -16,3 +16,10 @@ print(new_arr)
 arr_lc = [1, 2, 3, 5]
 new_lc = [elem * 2 for elem in arr]
 print(new_lc)
+
+list_ = [i ** 2 for i in range(1, 10) if i % 2 == 1]
+print(list_)
+
+# 우리는 리스트에 i를 제곱한 결과를 저장할 거야
+# i의 범위는 range(1, 10) 에서 뽑히는 숫자들이야
+# 단, i를 2로 나눈 값이 1이 아니라면 리스트에 넣지 않을꺼야
