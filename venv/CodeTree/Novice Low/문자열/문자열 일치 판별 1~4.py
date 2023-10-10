@@ -30,3 +30,6 @@ for _ in range(10):
     for i in range(leng - 1, -1, -1):
         print(string[i], end="")
     print()
+
+
+#    3
