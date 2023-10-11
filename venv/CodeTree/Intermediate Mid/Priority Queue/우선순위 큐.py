@@ -27,15 +27,15 @@ class PriorityQueue:
         return -self.items[0]
 
 
-pq = PriorityQueue()  # 우선순위 큐를 선언합니다. => 빈 우선순위 큐
+pq = PriorityQueue()  # 빈 우선순위 큐 선언
 pq.push(2)
 pq.push(9)
 pq.push(5)
+print(pq.top())  # 최대값을 출력, 삭제는 하지 않음.
+pq.pop()
+print(pq.size())
+while not pq.empty():
+    print(pq.top())
+    pq.pop()
 
-print(pq.top())  # 최댓값을 출력합니다. => 9
-pq.pop()  # 최댓값을 제거합니다.
-print(pq.size())  # 원소의 개수를 출력합니다 => 2
-while not pq.empty():  # 최댓값을 갖는 원소부터 순서대로 출력합니다.
-    print(pq.top())  # 순서대로 5 2가 출력됩니다.
-    pq.pop()  # 최댓값에 해당하는 원소를 뺍니다.
 
