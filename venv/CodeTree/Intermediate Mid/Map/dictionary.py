@@ -29,8 +29,7 @@ d3 = {
 # 3. K in d   : 현재 hashmap에 key가 K인 쌍이 있는지를 확인합니다. 있다면 True, 아니라면 False를 반환
  # 마찬가지 이유로 K not in d라는 구문 역시 사용 가능
 
-
- d = dict()
+d = dict()
 
 d['banana'] = 6
 d['apple'] = 2
@@ -43,5 +42,5 @@ d.pop('apple')
 if 'apple' not in d:
     print('not exists!')
 
-d.['cat'] = 10
+d['cat'] = 10
 print(d['cat'])
