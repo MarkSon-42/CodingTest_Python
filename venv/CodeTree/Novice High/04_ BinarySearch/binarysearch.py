@@ -6,10 +6,12 @@ def binarysearch(arr, target):
             print(arr[mid])
             break
         elif arr[mid] > target:
-            right = mid + 1
+            right = mid - 1
         else:
-            left = mid - 1
+            left = mid + 1
+
+        print(mid, left, right)
     return -1
 
 
-binarysearch([1, 2, 3, 4, 5, 6, 7, 8], 5)
+binarysearch([2, 10, 12, 16, 19, 21, 23, 24, 28, 31], 28)
