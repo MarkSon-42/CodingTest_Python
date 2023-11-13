@@ -1,25 +1,17 @@
 n, m = map(int, input().split())
 
-arr = list(map(int, input().split()))
-
-arr.sort()
-
 answer = []
 
-
-def print_result():
-    for elem in answer:
-        if len(answer) == m:
-            print(elem, end=' ')
-    print()
-
 def dfs():
-    for num in arr:
-        answer.append(num)
+    if len(answer) == m:
+        for elem in answer:
+            print(elem, end=' ')
+        print()
+        return
+
+    for i in range(1, n + 1):
+        answer.append(i)
         dfs()
         answer.pop()
-
-    print_result()
-
 
 dfs()
