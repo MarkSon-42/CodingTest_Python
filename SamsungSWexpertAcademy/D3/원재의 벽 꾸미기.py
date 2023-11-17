@@ -11,7 +11,9 @@ for tc in range(1, t + 1):
             val = a * (abs(r - c)) + b * (n - (r * c))
             min_val = min(min_val, val)
             c += 1
-    print('#%d %d' % (tc, min_val))
+    print("#%d %d" % (tc, min_val))
 
 
 # SWEA 출력 print('#%d %d' % (tc, min_value))
+
+# hell
