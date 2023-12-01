@@ -1,19 +1,15 @@
-import sys
-
-
-input = sys.stdin.readline
-
 n = int(input())
 
-building = [int(input()) for _ in range(n)]
-stack = []
+x = list(map(int, input().split()))
+
+num = [x[0]]
+
+for i in range(1, n):
+    num.append(num[i - 1] + x[i])
+
 answer = 0
 
 for i in range(n):
-    while stack and stack[-1] <= building[i]:
-        stack.pop()
-
-    stack.append(building[i])
-    answer += len(stack) - 1
+    answer += x[i] * (num[n - 1] - num[i])
 
 print(answer)
