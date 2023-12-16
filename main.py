@@ -1,15 +1,13 @@
-n = int(input())
+import sys
 
-x = list(map(int, input().split()))
+input = sys.stdin.readline
 
-num = [x[0]]
+n, m = map(int, input().split())
+a = list(map(int, input().split()))
 
-for i in range(1, n):
-    num.append(num[i - 1] + x[i])
-
-answer = 0
-
-for i in range(n):
-    answer += x[i] * (num[n - 1] - num[i])
-
-print(answer)
+dp = [0] * (n + 1)
+for k in range(1, n + 1):
+    dp[k] = dp[k - 1] + a[k - 1]
+for _ in range(m):
+    i, j = map(int, input().split())
+    print(dp[j] - dp[i - 1])
