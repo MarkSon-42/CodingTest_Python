@@ -1,26 +1,13 @@
-from collections import deque
+import sys
+
+sys.setrecursionlimit(10**6)
+input = sys.stdin.readline
+
+t = int(input())
+m, n, k = map(int, input().split())
+for _ in range(k):
+    x, y = tuple(map(int, input().split()))
 
 
-def solution(order):
-    answer = 0
-    length = len(order)
-    main_belt = deque([i for i in range(1, length + 1)])
-    sub_belt = []
-    for i in range(order[0] - 1):
-        if main_belt:
-            sub_belt.append(main_belt.popleft())
-
-    for box in order:
-        if main_belt and box == main_belt[0]:
-            main_belt.popleft()
-            answer += 1
-        elif sub_belt and box == sub_belt[-1]:
-            sub_belt.pop()
-            answer += 1
-        else:
-            break
-
-    return answer
-
-
-solution([5, 4, 3, 2, 1])
+# graph라는 2차원 배열에 통합하는 연습부터
+# visited까지 선언해서 가장 정석적인 풀이 ㄱ

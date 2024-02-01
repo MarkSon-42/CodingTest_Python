@@ -1,13 +1,14 @@
 import sys
 
+# input = sys.stdin.readline
+
 s = input()
 bomb = input()
 stack = []
-bomb_length = len(bomb)
 
 for char in s:
     stack.append(char)
-    if "".join(stack[-bomb_length:]) == bomb:
-        del stack[-bomb_length:]
+    if "".join(stack[-len(bomb) :]) == bomb:
+        del stack[-len(bomb) :]
 
 print("".join(stack) if stack else "FRULA")
