@@ -15,6 +15,7 @@ arr = [list(map(int, input().split())) for _ in range(n)]
 
 answer = sys.maxsize
 
+
 def dfs(i, j):
     global cnt
     if i < 0 or i >= n or j < 0 or j >= n:
@@ -26,6 +27,7 @@ def dfs(i, j):
             ny = dy + j
             dfs(nx, ny)
         return True
+
 
 # 예시
 # 222----333
@@ -41,7 +43,9 @@ def dfs(i, j):
 # 거리의 최솟값은 최단거리
 # 최단거리는 bfs!
 
-def bfs(num)
+
+def bfs(num):
+    pass
 
 
 cnt = 2
